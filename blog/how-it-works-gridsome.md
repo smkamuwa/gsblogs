@@ -1,6 +1,6 @@
 ---
 title: How It Works Gridsome
-featuredImage: uploads/maxresdefault.jpg
+featuredImage: /uploads/gridsome2.png
 ---
 Gridsome generates static html that hydrates into a Vue SPA once loaded in the browser. This means you can build both static websites & dynamic apps with Gridsome.
 

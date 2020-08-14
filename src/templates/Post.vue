@@ -1,6 +1,8 @@
 <template>
     <BlogLayout>
-        <div v-html="$page.post.content" />
+        <h1>{{ $page.post.title }} </h1>
+        <img :src="$page.post.featuredImage" alt="Image">
+        <div v-html="$page.post.content"/>
     </BlogLayout>
 </template>
 
@@ -9,6 +11,7 @@
         post: post(path:$path){
             title
             content
+            featuredImage
         }
     }
 </page-query>

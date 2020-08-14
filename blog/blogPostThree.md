@@ -1,5 +1,6 @@
 ---
 title: Blog Post Three
+featuredImage: /uploads/gridsome3.png
 ---
 
 # Blog Post Three

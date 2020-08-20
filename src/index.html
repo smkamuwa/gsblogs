@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html ${htmlAttrs}>
-<head>
+  <head>
     ${head}
+    <link as="style"
+          href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
+          rel="preload"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap"
+          rel="stylesheet"/>
+    <link crossorigin="anonymous"
+          href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+          integrity="sha256-imWjOiEEAcjWdL1+inhBu1dWYFyXuiO9vpJVEQd3y/c="
+          rel="stylesheet"/>
+    <link crossorigin='anonymous' 
+          media='screen' rel='stylesheet' 
+          href='https://d33wubrfki0l68.cloudfront.net/css/14630a3e428f8447f15a29191f9fe5e2c3d1dc69/styles/main.min.css'/>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body ${bodyAttrs}>
-    ${app}
-    ${scripts}
+  </head>
+  <body ${bodyAttrs}>
     <script>
-        if (window.netlifyIdentity) {
+      if (window.netlifyIdentity) {
           window.netlifyIdentity.on("init", user => {
             if (!user) {
               window.netlifyIdentity.on("login", () => {
@@ -16,7 +26,57 @@
               });
             }
           });
+      }
+
+      (function() {
+        window.__onThemeChange = function() {};
+        function setTheme(newTheme) {
+          window.__theme = newTheme;
+          preferredTheme = newTheme;
+          document.body.setAttribute('data-theme', newTheme);
+          window.__onThemeChange(newTheme);
         }
-      </script>
-</body>
+
+        var preferredTheme;
+        try {
+          preferredTheme = localStorage.getItem('theme');
+        } catch (err) { }
+
+        window.__setPreferredTheme = function(newTheme) {
+          setTheme(newTheme);
+          try {
+            localStorage.setItem('theme', newTheme);
+          } catch (err) {}
+        }
+
+        var darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        darkQuery.addListener(function(e) {
+          window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+        });
+
+        setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
+      })();
+    </script>
+
+    ${app}
+    ${scripts}
+
+    <script crossorigin="anonymous"
+        defer="defer"
+        integrity="sha256-CnNQJd80jPuIDyeQRRq7+Wgt+++Kl0dZLt4ETNmxMIw="
+        src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js">
+    </script>
+    <link crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
+      integrity="sha256-Ev8y2mML/gGa4LFVZgNpMTjKwj34q4pC4DcseWeRb9w="
+      rel="stylesheet"/>
+    <link crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css"
+      integrity="sha256-sw/JiPOV1ZfcXjqBJT1vqaA4vBGeiqn+b7PDhVv4OA4="
+      rel="stylesheet"/>
+    <script defer="defer"
+        src="https://cdn.jsdelivr.net/npm/alpinejs@2.3.3/dist/alpine.min.js">
+    </script>
+    <script src='https://d33wubrfki0l68.cloudfront.net/js/0c4a92e6bf78b06f8b5e9a19670639854f8ad9a4/js/main.js'></script>
+  </body>
 </html>

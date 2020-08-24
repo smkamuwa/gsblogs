@@ -8,39 +8,22 @@
             <div class="hero-slider z-20 relative" x-data x-init="slider('.hero-slider', 1, 1)">
               <div class="glide__track" data-glide-el="track">
                 <div class="glide__slides">          
-                  <div class="glide__slide flex flex-col lg:flex-row justify-between items-center">
-                    <div class="z-30 text-center lg:text-left mb-16 md:mb-20 xl:pr-48">
-                        <h4 class="font-body font-semi-bold text-primary text-sm md:text-lg uppercase tracking-widest">
-                            INNOVATORS AT LAW</h4>
-                        <h2 class="font-header text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-2 xl:pt-5 leading-relaxed">
-                            Commited to Helping Our Clients Succeed</h2>
-                        <a href="/services" class="btn btn-primary btn-large mt-6 md:mt-8 lg:mt-10">READ MORE</a>
+                    <div v-for="edge in $page.latests.edges" :key="edge.node.id" class="glide__slide flex flex-col lg:flex-row justify-between items-center">
+                        <div class="z-30 text-center lg:text-left mb-16 md:mb-20 xl:pr-48">
+                            <h4 class="font-body font-semi-bold text-primary text-sm md:text-lg uppercase tracking-widest">
+                                {{ edge.node.subtitle }}</h4>
+                            <h2 class="font-header text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-2 xl:pt-5 leading-relaxed">
+                                {{ edge.node.title }}</h2>
+                            <g-link :to="edge.node.path" class="btn btn-primary btn-large mt-6 md:mt-8 lg:mt-10">READ MORE</g-link>
+                        </div>
+                        <div class="lg:flex lg:justify-end hidden xl:w-1/2">
+                            <img src="https://d33wubrfki0l68.cloudfront.net/003c52259603632b9ed727356e8850f59c8bc176/35276/assets/img/unlicensed/hero-image.jpg"
+                                class="h-72 md:h-76 lg:h-80 w-full md:mr-10 object-cover object-left"
+                                alt="hero image"/>
+                        </div>
                     </div>
-                    <div class="lg:flex lg:justify-end hidden xl:w-1/2">
-                        <img src="https://d33wubrfki0l68.cloudfront.net/003c52259603632b9ed727356e8850f59c8bc176/35276/assets/img/unlicensed/hero-image.jpg"
-                            class="h-72 md:h-76 lg:h-80 w-full md:mr-10 object-cover object-left"
-                            alt="hero image"/>
-                    </div>
-                  </div>
-                  <div
-                    class="glide__slide flex flex-col lg:flex-row justify-between items-center">
-                    <div
-                        class="z-30 text-center lg:text-left mb-16 md:mb-20 xl:pr-48">
-                        <h4
-                            class="font-body font-semi-bold text-primary text-sm md:text-lg uppercase tracking-widest">
-                            Schedule A Free Consultation</h4>
-                        <h2
-                            class="font-header text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl pt-2 xl:pt-5 leading-relaxed">
-                            Ready to Move Forward with Your Case?</h2>
-                        <a href="/services"
-                        class="btn btn-primary btn-large mt-6 md:mt-8 lg:mt-10">READ MORE</a>
-                    </div>
-                    <div class="lg:flex lg:justify-end hidden xl:w-1/2">
-                        <img src="https://d33wubrfki0l68.cloudfront.net/af49249d33920bc9b7160de17f892a2a03208a9a/9f863/assets/img/unlicensed/hero-image-02.jpg"
-                            class="h-72 md:h-76 lg:h-80 w-full md:mr-10 object-cover object-left"
-                            alt="hero image"/>
-                    </div>
-                  </div>
+
+            
                 </div>
 
                 <div class="glide__arrows absolute right-0 top-50 mt-16 lg:mt-0 transform lg:-translate-y-1/2 hidden lg:block"
@@ -64,7 +47,7 @@
     </div>
 
     <div class="bg-gray-300 py-72 relative z-20">
-      <div class="container w-95/100 sm:w-9/10 lg:w-5/6 " v-for="edge in $page.homes.edges" :key="edge.node.id">
+      <div class="container w-95/100 sm:w-9/10 lg:w-5/6 " v-for="edge in $page.moments.edges" :key="edge.node.id">
         <div class="-my-80 bg-white">
           <div class="container py-16 md:py-20">
             <div class="w-full sm:w-5/6 md:w-9/10 xl:w-5/6 mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
@@ -81,8 +64,8 @@
                       {{ edge.node.title }}</h1>
                   <p v-html="edge.node.excerpt"
                   class="font-body font-light text-black text-sm pt-8 lg:pt-6 pb-10 leading-loose"/>                     
-                  <a href="/about"
-                  class="btn btn-primary btn-large">READ MORE</a>
+                  <g-link :to="edge.node.path"
+                  class="btn btn-primary btn-large">READ MORE</g-link>
               </div>
             </div>
           </div>
@@ -104,80 +87,24 @@
             </div>
             <div class="flex flex-wrap text-center z-50 relative">
                 
-                <div class="sm:w-5/6 md:w-1/2 lg:w-1/4 mx-auto group">
-                    <div
-                        class="bg-yellow-900 border border-b-0 lg:border-b md:border-r-0 last:border-r transition-all transform relative group-hover:scale-105 group-hover:z-100 border-primary group-hover:border-primary-lighter px-6 py-10 md:py-16">
-                        <div class="group">
-                            <img src="https://d33wubrfki0l68.cloudfront.net/cac2fb46be11ed30e0a3dc6870bf25dec8d051cc/d9396/assets/img/icons/icon-professional.svg"
-                                class="mx-auto block group-hover:hidden h-24 w-24"
-                                alt="icon"/>
-                            <img src="https://d33wubrfki0l68.cloudfront.net/6bc043dcda0444a09179b698b3f7413a8c608509/83e6c/assets/img/icons/icon-professional-hover.svg"
-                                class="mx-auto hidden group-hover:block h-24 w-24"
-                                alt="icon hover state"/>
+                <div v-for="edge in $page.studies.edges" :key="edge.node.id" class="sm:w-5/6 md:w-1/2 lg:w-1/4 mx-auto group">
+                    <g-link :to="edge.node.path">
+                        <div class="bg-yellow-900 border border-b-0 lg:border-b md:border-r-0 last:border-r transition-all transform relative group-hover:scale-105 group-hover:z-100 border-primary group-hover:border-primary-lighter px-6 py-10 md:py-16">
+                            <div class="group">
+                                <img src="https://d33wubrfki0l68.cloudfront.net/cac2fb46be11ed30e0a3dc6870bf25dec8d051cc/d9396/assets/img/icons/icon-professional.svg"
+                                    class="mx-auto block group-hover:hidden h-24 w-24"
+                                    alt="icon"/>
+                                <img src="https://d33wubrfki0l68.cloudfront.net/6bc043dcda0444a09179b698b3f7413a8c608509/83e6c/assets/img/icons/icon-professional-hover.svg"
+                                    class="mx-auto hidden group-hover:block h-24 w-24"
+                                    alt="icon hover state"/>
+                            </div>
+                            <h4 class="font-header text-white text-lg pt-8 md:pt-10">
+                                {{ edge.node.title }}</h4>
+                            <p
+                            class="font-body font-light text-sm text-white pt-4 md:pt-6 pb-3 md:pb-6 leading-loose">
+                                {{ edge.node.excerpt }}</p>
                         </div>
-                        <h4 class="font-header text-white text-lg pt-8 md:pt-10">
-                            Teknik Kendaraan Ringan Otomotif (TKRO)</h4>
-                        <p
-                        class="font-body font-light text-sm text-white pt-4 md:pt-6 pb-3 md:pb-6 leading-loose">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit ac imperdiet tellus</p>
-                    </div>
-                </div>
-    
-                <div class="sm:w-5/6 md:w-1/2 lg:w-1/4 mx-auto group">
-                    <div
-                        class="bg-yellow-900 border border-b-0 lg:border-b md:border-r-0 last:border-r transition-all transform relative group-hover:scale-105 group-hover:z-100 border-primary group-hover:border-primary-lighter px-6 py-10 md:py-16">
-                        <div class="group">
-                            <img src="https://d33wubrfki0l68.cloudfront.net/3c7c81046073eda54bfe93512b90006281153a6a/8a1c4/assets/img/icons/icon-reviewing.svg"
-                                class="mx-auto block group-hover:hidden h-24 w-24"
-                                alt="icon"/>
-                            <img src="https://d33wubrfki0l68.cloudfront.net/4ee728efcc0d180760d9de5be5c55502c7d9bc46/0675f/assets/img/icons/icon-reviewing-hover.svg"
-                                class="mx-auto hidden group-hover:block h-24 w-24"
-                                alt="icon hover state"/>
-                        </div>
-                        <h4 class="font-header text-white text-lg pt-8 md:pt-10">
-                            Teknik Komputer dan Jaringan (TKJ)</h4>
-                        <p
-                        class="font-body font-light text-sm text-white pt-4 md:pt-6 pb-3 md:pb-6 leading-loose">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit ac imperdiet tellus</p>
-                    </div>
-                </div>
-    
-                <div class="sm:w-5/6 md:w-1/2 lg:w-1/4 mx-auto group">
-                    <div
-                        class="bg-yellow-900 border border-b-0 lg:border-b md:border-r-0 last:border-r transition-all transform relative group-hover:scale-105 group-hover:z-100 border-primary group-hover:border-primary-lighter px-6 py-10 md:py-16">
-                        <div class="group">
-                            <img src="https://d33wubrfki0l68.cloudfront.net/43b632eb3f176671f1cb4a97b7c362efddbf7f54/7b5db/assets/img/icons/icon-support.svg"
-                                class="mx-auto block group-hover:hidden h-24 w-24"
-                                alt="icon"/>
-                            <img src="https://d33wubrfki0l68.cloudfront.net/46b81fdd3768a6da967bdbb26d42299f905b7d18/64a8f/assets/img/icons/icon-support-hover.svg"
-                                class="mx-auto hidden group-hover:block h-24 w-24"
-                                alt="icon hover state"/>
-                        </div>
-                        <h4 class="font-header text-white text-lg pt-8 md:pt-10">
-                            Otomatisasi Tata Kelola Perkantoran (OTKP)</h4>
-                        <p
-                        class="font-body font-light text-sm text-white pt-4 md:pt-6 pb-3 md:pb-6 leading-loose">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit ac imperdiet tellus</p>
-                    </div>
-                </div>
-    
-                <div class="sm:w-5/6 md:w-1/2 lg:w-1/4 mx-auto group">
-                    <div
-                        class="bg-yellow-900 border border-b-0 lg:border-b md:border-r-0 last:border-r transition-all transform relative group-hover:scale-105 group-hover:z-100 border-primary group-hover:border-primary-lighter px-6 py-10 md:py-16">
-                        <div class="group">
-                            <img src="https://d33wubrfki0l68.cloudfront.net/2ad0087c27be696257091db5ab7566a8e2d65149/db319/assets/img/icons/icon-rate.svg"
-                                class="mx-auto block group-hover:hidden h-24 w-24"
-                                alt="icon"/>
-                            <img src="https://d33wubrfki0l68.cloudfront.net/0b10a6c73fa4a61306d2b4bd088d8dd26628c758/80e4a/assets/img/icons/icon-rate-hover.svg"
-                                class="mx-auto hidden group-hover:block h-24 w-24"
-                                alt="icon hover state"/>
-                        </div>
-                        <h4 class="font-header text-white text-lg pt-8 md:pt-10">
-                            Bisnis Daring dan Permasaran (BDPM)</h4>
-                        <p
-                        class="font-body font-light text-sm text-white pt-4 md:pt-6 pb-3 md:pb-6 leading-loose">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit ac imperdiet tellus</p>
-                    </div>
+                    </g-link>
                 </div>
     
             </div>
@@ -257,12 +184,44 @@
               </div>
           </div>
       </div>
-    </div>
+    </div>    
   </Layout>
 </template>
 
 <page-query>
 query{
+  latests: allLatest{
+    edges{
+      node{
+        id
+        title
+        subtitle   
+        path     
+      }
+    }
+  }
+  moments: allMoment{
+    edges{
+      node{
+        id
+        title
+        featured
+        excerpt
+        path
+      }
+    }
+  }  
+  studies: allStudi{
+    edges{
+      node{
+        id
+        title
+        excerpt
+        content
+        path
+      }
+    }
+  }
   posts: allPost{
     edges{
       node{
@@ -274,17 +233,8 @@ query{
         summary
       }
     }
-  }
-  homes: allHome{
-    edges{
-      node{
-        id
-        title
-        excerpt
-        content
-      }
-    }
-  }
+  } 
+  
 }
 </page-query>
 

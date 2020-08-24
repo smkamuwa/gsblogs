@@ -1,6 +1,7 @@
 ---
-title: Gridsome is Beautifull Web Static
-excerpt: An example markdown page that has Vue Components inside of it! Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rerum earum quos explicabo suscipit maxime iste qui nihil.
+title: Teknik Komputer dan Jaringan
+featured: /uploads/gridsome2.png
+excerpt: An example markdown page that has Vue Components inside of it!.
 ---
 
 # Hello World!

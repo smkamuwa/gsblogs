@@ -1,9 +1,3 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
-
 module.exports = {
   siteName: 'SMK Muhammadiyah Watulimo',
   plugins: [   
@@ -20,8 +14,28 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'contents/page/**/*.md',
-        typeName: 'Home',
+        path: 'contents/moment/**/*.md',
+        typeName: 'Moment',
+        remark: {
+          // remark options
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'contents/latest/**/*.md',
+        typeName: 'Latest',
+        remark: {
+          // remark options
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'contents/studi/**/*.md',
+        typeName: 'Studi',
         remark: {
           // remark options
         }

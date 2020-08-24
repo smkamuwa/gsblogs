@@ -4,7 +4,7 @@
             <div class="absolute bg-cover inset-0 z-10 bg-grey-darker"></div>
             <div class="py-20 md:py-32 lg:py-36 z-20 relative text-center">
                 <h1 class="font-header text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                    Any Something to Write</h1>
+                    It's Moments for Us</h1>
             </div>
         </div>       
         <div class="container my-16 md:my-20 lg:my-24 flex flex-col-reverse lg:flex-row justify-between">
@@ -56,24 +56,22 @@
             </div>        
             <div class="w-full sm:w-9/10 lg:w-3/5 mx-auto lg:mx-0">
                 <h2 class="font-header text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                    {{ $page.post.title }}</h2> 
+                    {{ $page.moment.title }}</h2> 
                 <div class="flex flex-col md:flex-row justify-between pt-6 ">                  
-                    <img :src="$page.post.featured" alt="Image" class="bg-cover bg-no-repeat bg-top shadow-2xl">
+                    <img :src="$page.moment.featured" alt="Image" class="bg-cover bg-no-repeat bg-top shadow-2xl">
                 </div>
-                <p v-html="$page.post.content" class="font-body font-light text-sm text-black pt-5 md:pt-8  leading-loose" />                               
+                <p v-html="$page.moment.content" class="font-body font-light text-sm text-black pt-5 md:pt-8  leading-loose" />                               
             </div>
         </div>
     </Layout>
 </template>
 
 <page-query>
-    query Post($path:String!){
-        post: post(path:$path){
+    query Moment($path:String!){
+        moment: moment(path:$path){
             title
-            content
-            date
-            featured
-            summary
+            content          
+            featured           
         }
     }
 </page-query>
@@ -82,7 +80,7 @@
 export default {
     metaInfo(){
         return{
-            title: this.$page.post.title
+            title: this.$page.moment.title
         }
     }
 }

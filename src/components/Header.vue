@@ -9,26 +9,26 @@
                     </a>
                     <ul class="list-reset flex items-center">                
                         <li class="px-4 xl:px-6 hidden lg:block">
-                            <a href="/"
-                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Home</a>
+                            <g-link to="/"
+                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Beranda</g-link>
                         </li>
                         <li class="px-4 xl:px-6 hidden lg:block">
-                            <a href="/"
-                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">About</a>
+                            <g-link to="/about"
+                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Tentang Kami</g-link>
                         </li>
                         <li class="px-4 xl:px-6 hidden lg:block">
-                            <a href="/services"
-                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Services</a>
-                        </li>
-                        
-                        <li class="px-4 xl:px-6 hidden lg:block">
-                            <a href="/case-studies"
-                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Case Studies</a>
+                            <g-link to="/agenda"
+                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Agenda</g-link>
                         </li>
                         
                         <li class="px-4 xl:px-6 hidden lg:block">
-                            <a href="/contact"
-                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Contact</a>
+                            <g-link to="/blog"
+                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Blog</g-link>
+                        </li>
+                        
+                        <li class="px-4 xl:px-6 hidden lg:block">
+                            <g-link to="/contact"
+                            class="xl:text-lg font-body text-white hover:text-primary uppercase transition-colors">Kontak Kami</g-link>
                         </li>
                     </ul>                   
                     

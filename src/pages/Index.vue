@@ -91,12 +91,8 @@
                     <g-link :to="edge.node.path">
                         <div class="bg-yellow-900 border border-b-0 lg:border-b md:border-r-0 last:border-r transition-all transform relative group-hover:scale-105 group-hover:z-100 border-primary group-hover:border-primary-lighter px-6 py-10 md:py-16">
                             <div class="group">
-                                <img src="https://d33wubrfki0l68.cloudfront.net/cac2fb46be11ed30e0a3dc6870bf25dec8d051cc/d9396/assets/img/icons/icon-professional.svg"
-                                    class="mx-auto block group-hover:hidden h-24 w-24"
-                                    alt="icon"/>
-                                <img src="https://d33wubrfki0l68.cloudfront.net/6bc043dcda0444a09179b698b3f7413a8c608509/83e6c/assets/img/icons/icon-professional-hover.svg"
-                                    class="mx-auto hidden group-hover:block h-24 w-24"
-                                    alt="icon hover state"/>
+                              <svg class="mx-auto block group-hover:hidden h-24 w-24" alt="icon" viewBox="0 0 592 592" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path fill="#ee830c" d="M392 456h16v16h-16z"/><path d="M584 472h-8V256c0-17.673-14.327-32-32-32h-64V120c-.04-35.33-28.67-63.96-64-64H64C28.67 56.04.04 84.67 0 120v256c.04 35.33 28.67 63.96 64 64h77.752l-12 48H56c-13.255 0-24 10.745-24 24s10.745 24 24 24h504c17.673 0 32-14.327 32-32v-24a8 8 0 00-8-8zm-40-232c8.837 0 16 7.163 16 16v216h-88a8 8 0 00-5.656 2.344L452.688 488H347.312l-13.656-13.656A8 8 0 00328 472h-88V256c0-8.837 7.163-16 16-16h288zm-320 16v104H72c-8.837 0-16-7.163-16-16V128c0-8.837 7.163-16 16-16h335.656c8.837 0 16 7.163 16 16v96H256c-17.673 0-32 14.327-32 32zM64 424c-26.499-.026-47.974-21.501-48-48V120c.026-26.499 21.501-47.974 48-48h352c26.499.026 47.974 21.501 48 48v104h-24.344v-96c0-17.673-14.327-32-32-32H72c-17.673 0-32 14.327-32 32v216c0 17.673 14.327 32 32 32h152v48H64zm-8 96a8 8 0 010-16h152a31.675 31.675 0 004.448 16H56zm152-40v8h-61.752l12-48H224v32h-8a8 8 0 00-8 8zm368 24c0 8.837-7.163 16-16 16H240c-8.837 0-16-7.163-16-16v-16h100.688l13.656 13.656A8 8 0 00344 504h112a8 8 0 005.656-2.344L475.312 488H576v16z" fill="#ee830c" fill-rule="nonzero"/><path d="M536 256H264a8 8 0 00-8 8v168a8 8 0 008 8h272a8 8 0 008-8V264a8 8 0 00-8-8zm-8 168H272V272h256v152zM96.144 136c-8.912.009-16.135 7.232-16.144 16.144V200h16l.144-48H216v-16H96.144z" fill="#ee830c" fill-rule="nonzero"/><path fill="#ee830c" d="M232 136h16v16h-16z"/><path d="M304.144 288c-8.912.009-16.135 7.232-16.144 16.144V344h16l.144-40H360v-16h-55.856z" fill="#ee830c" fill-rule="nonzero"/><path fill="#ee830c" d="M376 288h16v16h-16z"/></svg>
+                              <svg class="mx-auto hidden group-hover:block h-24 w-24" alt="icon hover state" viewBox="0 0 592 592" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path fill="#ffa100" d="M392 456h16v16h-16z"/><path d="M584 472h-8V256c0-17.673-14.327-32-32-32h-64V120c-.04-35.33-28.67-63.96-64-64H64C28.67 56.04.04 84.67 0 120v256c.04 35.33 28.67 63.96 64 64h77.752l-12 48H56c-13.255 0-24 10.745-24 24s10.745 24 24 24h504c17.673 0 32-14.327 32-32v-24a8 8 0 00-8-8zm-40-232c8.837 0 16 7.163 16 16v216h-88a8 8 0 00-5.656 2.344L452.688 488H347.312l-13.656-13.656A8 8 0 00328 472h-88V256c0-8.837 7.163-16 16-16h288zm-320 16v104H72c-8.837 0-16-7.163-16-16V128c0-8.837 7.163-16 16-16h335.656c8.837 0 16 7.163 16 16v96H256c-17.673 0-32 14.327-32 32zM64 424c-26.499-.026-47.974-21.501-48-48V120c.026-26.499 21.501-47.974 48-48h352c26.499.026 47.974 21.501 48 48v104h-24.344v-96c0-17.673-14.327-32-32-32H72c-17.673 0-32 14.327-32 32v216c0 17.673 14.327 32 32 32h152v48H64zm-8 96a8 8 0 010-16h152a31.675 31.675 0 004.448 16H56zm152-40v8h-61.752l12-48H224v32h-8a8 8 0 00-8 8zm368 24c0 8.837-7.163 16-16 16H240c-8.837 0-16-7.163-16-16v-16h100.688l13.656 13.656A8 8 0 00344 504h112a8 8 0 005.656-2.344L475.312 488H576v16z" fill="#ffa100" fill-rule="nonzero"/><path d="M536 256H264a8 8 0 00-8 8v168a8 8 0 008 8h272a8 8 0 008-8V264a8 8 0 00-8-8zm-8 168H272V272h256v152zM96.144 136c-8.912.009-16.135 7.232-16.144 16.144V200h16l.144-48H216v-16H96.144z" fill="#ffa100" fill-rule="nonzero"/><path fill="#ffa100" d="M232 136h16v16h-16z"/><path d="M304.144 288c-8.912.009-16.135 7.232-16.144 16.144V344h16l.144-40H360v-16h-55.856z" fill="#ffa100" fill-rule="nonzero"/><path fill="#ffa100" d="M376 288h16v16h-16z"/></svg>
                             </div>
                             <h4 class="font-header text-white text-lg pt-8 md:pt-10">
                                 {{ edge.node.title }}</h4>
@@ -148,37 +144,7 @@
                                     <p v-html="edge.node.summary" class="font-body font-light text-black text-sm leading-loose"/>
                                 </div>
                             </div>
-                        </div>
-                        <div class="glide__slide pt-20 md:pt-0 pb-10">
-                            <div class="shadow-xl text-center md:text-left">
-                                <img src="https://d33wubrfki0l68.cloudfront.net/1e379de62c7d2f40b1148a9878c834b6ad5022d0/4dc05/assets/img/unlicensed/testimonial-04.jpg"
-                                     class="object-cover object-top h-60 sm:h-68 md:h-64 w-full"
-                                     alt="testimonial image"/>
-                                <div class="px-6 md:px-8 py-8 md:py-10">
-                                    <h4
-                                        class="font-header text-primary text-lg pb-5">
-                                        Allison Hensley</h4>
-                                    <p
-                                       class="font-body font-light text-black text-sm leading-loose">
-                                        Lorem ipsum dolor sit amet elit. Phasellus ac imperdiet tellus. Id nisl semper, bibendum velit id, blandit ex. Proin id fermentum ipsum. Sed a rutrum nisi. Integer id accumsan.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="glide__slide pt-20 md:pt-0 pb-10">
-                            <div class="shadow-xl text-center md:text-left">
-                                <img src="https://d33wubrfki0l68.cloudfront.net/f89697391be6369d01e4a932628c1e35432a5937/19756/assets/img/unlicensed/testimonial-03.jpg"
-                                     class="object-cover object-top h-60 sm:h-68 md:h-64 w-full"
-                                     alt="testimonial image"/>
-                                <div class="px-6 md:px-8 py-8 md:py-10">
-                                    <h4
-                                        class="font-header text-primary text-lg pb-5">
-                                        Dennis Hertz</h4>
-                                    <p
-                                       class="font-body font-light text-black text-sm leading-loose">
-                                        Lorem ipsum dolor sit amet elit. Phasellus ac imperdiet tellus. Id nisl semper, bibendum velit id, blandit ex. Proin id fermentum ipsum. Sed a rutrum nisi. Integer id accumsan.</p>
-                                </div>
-                            </div>
-                        </div>
+                        </div>                        
                     </div>
                   </div>
               </div>
